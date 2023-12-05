@@ -14,7 +14,7 @@ const storage = Multer.diskStorage({
 });
 const upload = Multer({ storage: storage });
 
-// 图片
+
 route.post("/v1/upload", upload.single("files"), Upload);
 async function Upload(ctx) {
   if (ctx.file) {
